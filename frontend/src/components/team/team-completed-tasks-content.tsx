@@ -248,7 +248,7 @@ export const TeamCompletedTasksContent = ({ selectedTypes }: TeamCompletedTasksC
                                 rightLabel="Tasks"
                                 tooltipTimeSuffix="spent"
                                 onBarClick={(item) => handleMemberClick(item.fullName)}
-                                width="800px"
+                                width={700}
                             />
                         ) : (
                             <HStack gap={6} align="start">

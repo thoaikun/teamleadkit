@@ -39,7 +39,7 @@ export const MemberSingleBarChart = ({
     tooltipSuffix = "",
     allowDecimals = true,
     onBarClick,
-    height = 200,
+    height = 500,
 }: MemberSingleBarChartProps) => {
     const chart = useChart({
         data,

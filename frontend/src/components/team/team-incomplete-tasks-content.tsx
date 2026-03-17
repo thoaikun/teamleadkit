@@ -224,7 +224,7 @@ export const TeamIncompleteTasksContent = ({
                         rightLabel="Tasks"
                         tooltipTimeSuffix="remaining"
                         onBarClick={handleBarClick}
-                        width="800px"
+                        width={800}
                     />
                 ) : (
                     <HStack gap={6} align="start">
