@@ -10,7 +10,6 @@ import {
 import { useState } from "react";
 import { FaPlus, FaCloudDownloadAlt } from "react-icons/fa";
 import { Tooltip } from "@/components/ui/tooltip";
-import { toaster } from "@/components/ui/toaster";
 import { useWorkContext } from "@/context/work-ctx";
 import { WorkTaskListItem } from "./work-task-list-item";
 
@@ -22,10 +21,6 @@ export const WorkTaskListPanel = () => {
     const handleAdd = async (forceRefresh: boolean) => {
         const value = input.trim();
         if (!value) return;
-        if (!value.startsWith("L-")) {
-            toaster.create({ description: "Task ID must start with \"L-\"", type: "warning" });
-            return;
-        }
         await addTask(value, forceRefresh);
         setInput("");
     };
